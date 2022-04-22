@@ -1,0 +1,1 @@
+[![<ORG_NAME>](https://circleci.com/<gh>/<vzschool>/<ad340>.svg?style=svg)](<https://app.circleci.com/pipelines/github/vzschool/ad340>)
