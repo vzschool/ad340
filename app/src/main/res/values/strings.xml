@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">ad340</string>
+    <string name="editTextName">name</string>
+    <string name="editTextAge">age</string>
+    <string name="editTextDescription">something about yourself</string>
+    <string name="buttonDOB">date of birth</string>
+    <string name="editTextOccupation">occupation</string>
+    <string name="empty" />
+    <string name="errorEmptyEditText">you have empty fields</string>
+    <string name="errorAge">you are too young</string>
+    <string name="buttonSubmit">submit</string>
+    <string name="textViewName">Vladislav Zakharov</string>
+    <string name="textViewAge">18</string>
+    <string name="textViewOccupation">developer</string>
+    <string name="textViewDescription">something about myself</string>
+    <string name="buttonBack">back</string>
 </resources>

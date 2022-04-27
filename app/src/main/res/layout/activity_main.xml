@@ -6,13 +6,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Hello World!"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="none"
+        android:hint="@string/editTextName"
+        android:minWidth="@dimen/min_width"
+        android:minHeight="@dimen/min_height"
+        android:inputType="textAutoCorrect"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck"
+        />
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/editTextDescription"
+        android:minWidth="@dimen/min_width"
+        android:minHeight="@dimen/min_height"
+        android:inputType="textAutoCorrect"
+        android:autofillHints="none"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextOccupation"
+        tools:ignore="TextContrastCheck"
+        />
+
+    <EditText
+        android:id="@+id/editTextOccupation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/editTextOccupation"
+        android:minWidth="@dimen/min_width"
+        android:minHeight="@dimen/min_height"
+        android:inputType="textAutoCorrect"
+        android:autofillHints="none"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDOB"
+        tools:ignore="TextContrastCheck"
+        />
+
+    <Button
+        android:id="@+id/buttonDOB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openDatePicker"
+        android:text="@string/buttonDOB"
+        android:minWidth="@dimen/min_width"
+        android:minHeight="@dimen/min_height"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextOccupation" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onSubmit"
+        android:text="@string/buttonSubmit"
+        android:minWidth="@dimen/min_width"
+        android:minHeight="@dimen/min_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDOB" />
+
+
+
+
+
 
   </androidx.constraintlayout.widget.ConstraintLayout>

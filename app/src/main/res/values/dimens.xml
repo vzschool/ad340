@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="min_height">48dp</dimen>
+    <dimen name="min_width">256dp</dimen>
+    <dimen name="textViewName">28sp</dimen>
+    <dimen name="textViewAge">28sp</dimen>
+    <dimen name="textViewNameMargin">12dp</dimen>
+    <dimen name="textViewAgeMargin">12sp</dimen>
+    <dimen name="textViewOccupationMargin">12sp</dimen>
+    <dimen name="textViewOccupation">18</dimen>
+    <dimen name="textViewDescriptionMargin">12sp</dimen>
+</resources>
