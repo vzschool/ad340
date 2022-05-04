@@ -9,4 +9,5 @@
     <dimen name="textViewOccupationMargin">12sp</dimen>
     <dimen name="textViewOccupation">18</dimen>
     <dimen name="textViewDescriptionMargin">12sp</dimen>
+    <dimen name="fragmentProfilePadding">10dp</dimen>
 </resources>

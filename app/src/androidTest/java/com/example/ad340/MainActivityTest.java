@@ -26,10 +26,13 @@ public class MainActivityTest {
             = new ActivityScenarioRule<>(MainActivity.class);
 
     @Test
-    public void test() {
+    public void testTextInput() {
         onView(withId(R.id.editTextName)).perform(typeText("Vladislav Zakharov"));
         onView(withId(R.id.editTextName)).check(matches(withText("Vladislav Zakharov")));
+        onView(withId(R.id.editTextDescription)).perform(typeText("human being"));
+        onView(withId(R.id.editTextDescription)).check(matches(withText("human being")));
+        onView(withId(R.id.editTextOccupation)).perform(typeText("developer"));
+        onView(withId(R.id.editTextOccupation)).check(matches(withText("developer")));
     }
-
 
 }

@@ -1,11 +1,14 @@
 package com.example.ad340;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.icu.util.Calendar;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,7 +18,11 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FragmentManager.OnBackStackChangedListener{
+
+    private String TAG = FragmentProfile.class.getSimpleName();
+
+    FragmentManager fragmentManager;
 
     private EditText editTextName;
     private EditText editTextDescription;
@@ -30,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        fragmentManager = getSupportFragmentManager();
+        fragmentManager.addOnBackStackChangedListener(this);
 
         editTextName = findViewById(R.id.editTextName);
         editTextDescription = findViewById(R.id.editTextDescription);
@@ -74,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    public void onSubmit(View view) {
+    public void openProfile(View view) {
         String name = editTextName.getText().toString();
         String description = editTextDescription.getText().toString();
         String occupation = editTextOccupation.getText().toString();
@@ -91,13 +101,66 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        Intent intent = new Intent(this, ProfileActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString(Constants.NAME_KEY, name);
         bundle.putString(Constants.DESCRIPTION_KEY, description);
         bundle.putString(Constants.OCCUPATION_KEY, occupation);
         bundle.putInt(Constants.AGE_KEY, age);
-        intent.putExtras(bundle);
-        startActivity(intent);
+
+        FragmentProfile fragmentProfile = new FragmentProfile();
+        fragmentProfile.setArguments(bundle);
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.add(R.id.fragmentProfile, fragmentProfile, "fragmentProfile");
+        transaction.addToBackStack("openFragmentProfile");
+        transaction.commit();
+        Log.i(TAG, "onCreate()");
     }
+
+    public void openMatches(View view) {
+        FragmentSettings fragmentMatches = new FragmentSettings();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.add(R.id.fragmentProfile, fragmentMatches, "fragmentMatches");
+        transaction.commit();
+        Log.i(TAG, "onCreate()");
+    }
+
+    public void openSettings(View view) {
+        FragmentSettings fragmentSettings = new FragmentSettings();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.add(R.id.fragmentProfile, fragmentSettings, "fragmentSettings");
+        transaction.commit();
+        Log.i(TAG, "onCreate()");
+    }
+
+    @Override
+    public void onBackStackChanged() {
+
+    }
+
+//    public void onSubmit(View view) {
+//        String name = editTextName.getText().toString();
+//        String description = editTextDescription.getText().toString();
+//        String occupation = editTextOccupation.getText().toString();
+//        int age = Period.between(LocalDate.of(year, month, day), LocalDate.now()).getYears();
+//
+//        if (name.equals("") || description.equals("") || occupation.equals("")) {
+//            // empty strings are not valid form input show a Toast to the user
+//            Toast.makeText(getApplicationContext(), getString(R.string.errorEmptyEditText), Toast.LENGTH_LONG).show();
+//            return;
+//        }
+//
+//        if (age < 18) {
+//            Toast.makeText(getApplicationContext(), getString(R.string.errorAge), Toast.LENGTH_LONG).show();
+//            return;
+//        }
+//
+//        Intent intent = new Intent(this, ProfileActivity.class);
+//        Bundle bundle = new Bundle();
+//        bundle.putString(Constants.NAME_KEY, name);
+//        bundle.putString(Constants.DESCRIPTION_KEY, description);
+//        bundle.putString(Constants.OCCUPATION_KEY, occupation);
+//        bundle.putInt(Constants.AGE_KEY, age);
+//        intent.putExtras(bundle);
+//        startActivity(intent);
+//    }
 }

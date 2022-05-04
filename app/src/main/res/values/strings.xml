@@ -14,4 +14,7 @@
     <string name="textViewOccupation">developer</string>
     <string name="textViewDescription">something about myself</string>
     <string name="buttonBack">back</string>
+    <string name="buttonProfile">profile</string>
+    <string name="buttonMatches">matches</string>
+    <string name="buttonSettings">settings</string>
 </resources>
