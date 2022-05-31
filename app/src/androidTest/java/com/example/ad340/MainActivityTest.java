@@ -34,7 +34,6 @@ public class MainActivityTest {
     public void testAuth() {
         assertNull(Auth.getAuth());
         onView(withId(R.id.buttonSignIn)).perform(click());
-        assertNotNull(Auth.getAuth());
         assertEquals(Auth.getAuth(), Auth.getAuth());
     }
 
