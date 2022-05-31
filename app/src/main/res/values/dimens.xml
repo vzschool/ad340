@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="min_height">48dp</dimen>
-    <dimen name="min_width">256dp</dimen>
-    <dimen name="textViewName">28sp</dimen>
-    <dimen name="textViewAge">28sp</dimen>
-    <dimen name="textViewNameMargin">12dp</dimen>
-    <dimen name="textViewAgeMargin">12sp</dimen>
-    <dimen name="textViewOccupationMargin">12sp</dimen>
-    <dimen name="textViewOccupation">18</dimen>
-    <dimen name="textViewDescriptionMargin">12sp</dimen>
-    <dimen name="fragmentProfilePadding">10dp</dimen>
+    <dimen name="navbarMargin">10dp</dimen>
+    <dimen name="profileMargin">10dp</dimen>
+    <dimen name="textViewNameMargin">10sp</dimen>
+    <dimen name="textViewName">20sp</dimen>
+    <dimen name="textViewAgeMargin">10sp</dimen>
+    <dimen name="textViewAge">20sp</dimen>
+    <dimen name="textViewOccupationMargin">10sp</dimen>
+    <dimen name="textViewDescriptionMargin">10sp</dimen>
+    <dimen name="shr_product_card_image_height">60sp</dimen>
 </resources>

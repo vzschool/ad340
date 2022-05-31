@@ -1,20 +1,20 @@
 <resources>
-    <string name="app_name">ad340</string>
+    <string name="app_name">AD340</string>
+    <string name="buttonBack"><![CDATA[<]]></string>
     <string name="editTextName">name</string>
-    <string name="editTextAge">age</string>
-    <string name="editTextDescription">something about yourself</string>
-    <string name="buttonDOB">date of birth</string>
     <string name="editTextOccupation">occupation</string>
-    <string name="empty" />
-    <string name="errorEmptyEditText">you have empty fields</string>
-    <string name="errorAge">you are too young</string>
-    <string name="buttonSubmit">submit</string>
+    <string name="editTextAbout">about</string>
     <string name="textViewName">Vladislav Zakharov</string>
-    <string name="textViewAge">18</string>
-    <string name="textViewOccupation">developer</string>
-    <string name="textViewDescription">something about myself</string>
-    <string name="buttonBack">back</string>
-    <string name="buttonProfile">profile</string>
-    <string name="buttonMatches">matches</string>
-    <string name="buttonSettings">settings</string>
+    <string name="textViewAge">20</string>
+    <string name="textViewOccupation">Application Developer</string>
+    <string name="textViewDescription">The best application developer</string>
+    <string name="errorEmptyEditText">empty fields</string>
+    <string name="errorAge">you are too young</string>
+    <string name="shr_product_title">Some title</string>
+    <string name="shr_product_description">some description</string>
+    <string name="textViewSignIn">Sign In</string>
+    <string name="buttonSignOut">sign out</string>
+    <string name="buttonDOB">birthday</string>
+    <string name="buttonSaveProfile">save</string>
+    <string name="textViewDOB">DOB</string>
 </resources>
