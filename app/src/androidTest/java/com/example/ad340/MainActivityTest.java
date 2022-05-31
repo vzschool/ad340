@@ -7,6 +7,10 @@ import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -24,6 +28,13 @@ public class MainActivityTest {
     @Test
     public void testSignIn() {
         onView(withId(R.id.buttonSignIn)).perform(click());
+    }
+
+    @Test void testAuth() {
+        assertNull(Auth.getAuth());
+        onView(withId(R.id.buttonSignIn)).perform(click());
+        assertNotNull(Auth.getAuth());
+        assertEquals(Auth.getAuth(), Auth.getAuth());
     }
 
 }
