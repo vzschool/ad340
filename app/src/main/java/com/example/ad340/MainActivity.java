@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.util.Consumer;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.ad340.profile.ProfileViewModel;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements FragmentManager.OnBackStackChangedListener {
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements FragmentManager.O
         fragmentManager.addOnBackStackChangedListener(this);
 
         auth = getAuth();
+        checkProfile(auth.getUid());
     }
 
     @Override
@@ -42,5 +45,20 @@ public class MainActivity extends AppCompatActivity implements FragmentManager.O
             startActivity(intent);
         }
         return Auth.getAuth();
+    }
+
+    /**
+     *
+     */
+    private void checkProfile(String uid) {
+        Consumer<Boolean> callback = result -> {
+            if (result) {
+                // User does exist, proceed to profile fragment
+            } else {
+                // User doesn't exist, proceed to profileEdit fragment
+                Log.i(TAG, "user doesn't exist");
+            }
+        };
+        ProfileViewModel.hasProfile(uid, callback);
     }
 }
