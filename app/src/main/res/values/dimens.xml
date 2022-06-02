@@ -6,7 +6,8 @@
     <dimen name="textViewName">20sp</dimen>
     <dimen name="textViewAgeMargin">10sp</dimen>
     <dimen name="textViewAge">20sp</dimen>
-    <dimen name="textViewOccupationMargin">10sp</dimen>
-    <dimen name="textViewDescriptionMargin">10sp</dimen>
+    <dimen name="textViewOccupationMargin">20sp</dimen>
+    <dimen name="textViewAboutMargin">20sp</dimen>
     <dimen name="shr_product_card_image_height">60sp</dimen>
+    <dimen name="threehundred">300dp</dimen>
 </resources>

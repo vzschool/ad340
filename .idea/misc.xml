@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/layout/fragment_match.xml" value="0.24282073974609378" />
         <entry key="app/src/main/res/layout/fragment_matches.xml" value="0.26193745930989587" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25783706886180935" />
+        <entry key="app/src/main/res/layout/fragment_profile_edit.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_profile_settings.xml" value="0.22135416666666666" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.18489583333333334" />
         <entry key="app/src/main/res/layout/gragment_profile.xml" value="0.1375" />

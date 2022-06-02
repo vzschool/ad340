@@ -15,8 +15,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Calendar;
 
 public class DatePickerFragment extends AppCompatDialogFragment implements DatePickerDialog.OnDateSetListener {
-
-    private String TAG = MainActivity.class.getSimpleName();
+    private final String TAG = MainActivity.class.getSimpleName();
 
     @NonNull
     @Override
@@ -29,13 +28,12 @@ public class DatePickerFragment extends AppCompatDialogFragment implements DateP
         return new DatePickerDialog(getActivity(), DatePickerFragment.this, year, month, day);
     }
 
-    public void onDateSet(DatePicker view, int yy, int mm, int dd) {
-
-//        populateSetDate(yy, mm+1, dd);
+    public void onDateSet(DatePicker view, int yyyy, int mm, int dd) {
+        Bundle bundle = new Bundle();
+        bundle.putString("DOB", yyyy + "/" + (mm+1) + "/" + dd);
+        bundle.putInt("yyyy", yyyy);
+        bundle.putInt("mm", mm);
+        bundle.putInt("dd", dd);
+        getParentFragmentManager().setFragmentResult("requestKey", bundle);
     }
-
-//    public void populateSetDate(int year, int month, int day) {
-//        dob.setText(month+"/"+day+"/"+year);
-//    }
-
 }

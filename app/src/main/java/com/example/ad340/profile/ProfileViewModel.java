@@ -3,8 +3,17 @@ package com.example.ad340.profile;
 import androidx.core.util.Consumer;
 
 public class ProfileViewModel {
+    private final ProfileModel profileModel;
 
-    public static void hasProfile(String uid, Consumer<Boolean> callback) {
-        ProfileModel.hasProfile(uid, callback);
+    public ProfileViewModel () {
+        profileModel = new ProfileModel();
+    }
+
+    public void updateProfile(Profile profile) {
+        profileModel.updateProfile(profile);
+    }
+
+    public void getProfile(String uid, Consumer<Profile> callback) {
+        profileModel.getProfile(uid, callback);
     }
 }

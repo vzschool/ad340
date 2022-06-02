@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/buttonOpenProfileEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonOpenProfileEdit"
+        android:layout_alignParentEnd="true"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/threehundred"
+        android:src="@drawable/image"
+        android:layout_below="@+id/buttonOpenProfileEdit"
+        />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewProfile"
+        android:layout_marginStart="@dimen/textViewName"
+        android:layout_marginTop="@dimen/textViewName"
+        android:layout_marginEnd="@dimen/textViewName"
+        android:layout_marginBottom="@dimen/textViewName"
+        android:text="@string/textViewName"
+        android:textSize="@dimen/textViewName" />
+
+    <TextView
+        android:id="@+id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewAge"
+        android:textSize="@dimen/textViewAge"
+        android:layout_toEndOf="@id/textViewName"
+        android:layout_alignBottom="@id/textViewName"
+        />
+
+    <TextView
+        android:id="@+id/textViewOccupation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewName"
+        android:layout_marginStart="@dimen/textViewOccupationMargin"
+        android:text="@string/textViewOccupation" />
+
+    <TextView
+        android:id="@+id/textViewAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textviewAbout"
+        android:layout_marginTop="@dimen/textViewAboutMargin"
+        android:layout_below="@+id/textViewOccupation"
+        android:layout_marginStart="@dimen/textViewAboutMargin"
+        />
+
+</RelativeLayout>

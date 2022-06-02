@@ -7,7 +7,7 @@
     <string name="textViewName">Vladislav Zakharov</string>
     <string name="textViewAge">20</string>
     <string name="textViewOccupation">Application Developer</string>
-    <string name="textViewDescription">The best application developer</string>
+    <string name="textviewAbout">Something about me!</string>
     <string name="errorEmptyEditText">empty fields</string>
     <string name="errorAge">you are too young</string>
     <string name="shr_product_title">Some title</string>
@@ -16,5 +16,6 @@
     <string name="buttonSignOut">sign out</string>
     <string name="buttonDOB">birthday</string>
     <string name="buttonSaveProfile">save</string>
-    <string name="textViewDOB">DOB</string>
+    <string name="buttonOpenProfileEdit">edit</string>
+    <string name="textViewDOB">your birthday!</string>
 </resources>
