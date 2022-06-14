@@ -61,6 +61,9 @@ public class ProfileEditFragment extends Fragment {
                          profile.getMM() + "/" +
                          profile.getDD();
             textViewDOB.setText(dob);
+            yyyy = profile.getYYYY();
+            mm = profile.getMM();
+            dd = profile.getDD();
         }
 
         buttonDOB.setOnClickListener(view1 -> {
